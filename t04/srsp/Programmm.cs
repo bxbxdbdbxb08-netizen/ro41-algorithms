@@ -1,6 +1,6 @@
 using System;
 
-// Инструкции верхнего уровня (Top-level statements)
+
 int count = 0;
 int sum = 0;
 int fives = 0;
@@ -29,14 +29,14 @@ while (g != Grades.Stop)
 
 Grades.PrintStats(count, sum, fives);
 
-// Статический класс Grades после инструкций верхнего уровня
+
 static class Grades
 {
     public const int Min = 2;
     public const int Max = 5;
     public const int Stop = 0;
 
-    // Читает оценку, нечисловой ввод возвращает как -1
+    
     public static int Read()
     {
         Console.Write("Введите оценку (0 — конец): ");
@@ -50,13 +50,13 @@ static class Grades
         return -1;
     }
 
-    // Проверяет, что оценка от 2 до 5 (Min .. Max)
+    
     public static bool IsValid(int g)
     {
         return g >= Min && g <= Max;
     }
 
-    // Выводит итог или «Оценок нет»
+  
     public static void PrintStats(int count, int sum, int fives)
     {
         if (count == 0)
